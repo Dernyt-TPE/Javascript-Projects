@@ -6,38 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Counter</title>
-
-    <style>
-        textarea {
-            width: 100%;
-            border-color: darkblue;
-            height: 500px;
-            font-size: 20px;
-
-        }
-
-        p {
-            text-align: center;
-            background-color: cornflowerblue;
-            font-size: 30px;
-            border-radius: 10px;
-            color: white;
-
-            border: 2px solid greenyellow;
-        }
-
-        p span{
-            padding: 0px 10px;
-        }
-
-        h1{
-            text-align: center; 
-            background-color: rgb(131, 161, 216); color: black;
-            border-radius: 10px; font-family: cursive;
-
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body style="padding: 75px 100px;">
@@ -49,38 +18,7 @@
     </p>
 
 
-    <script>
-
-        // Character Count
-        let textbox = document.getElementById("textarea");
-        textbox.addEventListener('input', function () {
-            var text = this.value;
-            let char = text.length;
-            document.getElementById("character").innerHTML = char;
-
-            // Word Count
-
-            text = text.trim();
-
-            //passing regex in split to split for both - whitespace and new line
-            let words = text.split(/[\s\n]/);
-
-
-            let list = words.filter(function (elm) {
-                return elm != "";
-            });
-
-
-            document.getElementById("word").innerHTML = words.length;
-
-            // Paragraph Count
-
-            let para = text.split("\n");
-
-            document.getElementById("para").innerHTML = para.length;
-
-        });
-    </script>
+    <script src="script.js" ></script>
 
 </body>
 
